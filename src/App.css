@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+
+.page-greet,
+.page-education,
+.page-experience,
+.page-skills,
+.page-contact {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.page-greet {
+  min-height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(10,10,10,0.7),
+      rgba(26,26,26,0.7) 50%,
+      rgba(13,13,13,0.7)
+    ),
+    url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flimbuscompany.wiki.gg%2Fimages%2F0%2F00%2FStory_L_Corp._HQ_Control_Team_Hallway_1_BG.png&f=1&nofb=1");
+  background-size: cover;
+  background-position: center;
+}
+
+.page-education {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(20,10,0,0.85));
+}
+
+.page-experience {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(10,0,20,0.85), rgba(0,0,0,0.85));
+}
+
+.page-skills {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(0,20,20,0.85), rgba(0,0,0,0.85));
+}
+
+.page-contact {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(20,0,0,0.85), rgba(0,0,0,0.85));
+}
+

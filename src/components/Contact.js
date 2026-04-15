@@ -18,32 +18,59 @@ const Contact = () => {
   };
 
   return (
-    <section className="my-12">
-      <h2 className="text-3xl font-semibold text-blue-600">Contact</h2>
+    <section className="my-12 text-amber-400">
 
-      <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-full p-2 border rounded"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      {/* Gradient Title */}
+      <h2 className="text-3xl font-extrabold tracking-wide mb-6
+        bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600
+        bg-clip-text text-transparent">
+        Contact
+      </h2>
 
-        <textarea
-          placeholder="Your Message"
-          className="w-full p-2 border rounded"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
+      {/* Card */}
+      <div className="bg-red-950/40 border border-amber-800 rounded-xl p-6 shadow-xl
+  hover:shadow-amber-500/20 transition-all duration-300 backdrop-blur-sm">
 
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-        >
-          Send
-        </button>
-      </form>
+        <form onSubmit={handleSubmit} className="space-y-4">
+
+          {/* Name Input */}
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-3 rounded-lg bg-black/70 border border-amber-800
+              text-amber-200 placeholder-amber-600
+              focus:outline-none focus:ring-2 focus:ring-amber-500
+              transition"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          {/* Message Input */}
+          <textarea
+            placeholder="Your Message"
+            className="w-full p-3 rounded-lg bg-black/70 border border-amber-800
+              text-amber-200 placeholder-amber-600 h-32
+              focus:outline-none focus:ring-2 focus:ring-amber-500
+              transition"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+
+          {/* Button */}
+          <button
+            type="submit"
+            className="px-6 py-2 rounded-lg font-medium text-amber-500
+              bg-gradient-to-r from-yellow-900 to-yellow-950
+              border border-amber-800
+              hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20
+              active:scale-95 transition-all duration-200"
+          >
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
     </section>
   );
 };

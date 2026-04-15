@@ -30,26 +30,60 @@ function App() {
     }
   };
 
-  return (
-    <div className="bg-gray-50 text-gray-900 font-sans min-h-screen">
 
-      <header className="text-center py-6 bg-blue-600 text-white">
-        <h1 className="text-4xl font-bold">My Portfolio</h1>
+const getPageClass = () => {
+  switch (activeSection) {
+    case "About":
+      return "page-greet";
+    case "Education":
+      return "page-education";
+    case "Experience":
+      return "page-experience";
+    case "Skills":
+      return "page-skills";
+    case "Contact":
+      return "page-contact";
+    default:
+      return "page-greet";
+  }
+};
+
+  return (
+    <div className={`${getPageClass()} min-h-screen text-amber-200 font-sans relative overflow-hidden`}>
+
+      {/* Glow overlay (Laravel-style ambiance) */}
+      <div className="fixed inset-0 pointer-events-none
+                      bg-[radial-gradient(circle_at_center,rgba(255,180,80,0.08),transparent_60%)]
+                      shadow-[inset_0_0_180px_rgba(255,140,0,0.25)]">
+      </div>
+
+      {/* HEADER */}
+      <header className="text-center py-8 border-b border-amber-800 bg-black/40 backdrop-blur-sm">
+        <h1 className="text-4xl font-extrabold tracking-widest
+                       bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600
+                       bg-clip-text text-transparent">
+          MY PORTFOLIO SYSTEM
+        </h1>
+        <p className="text-amber-500 text-sm mt-2">
+          Developer Dashboard Active
+        </p>
       </header>
 
+      {/* NAV */}
       <Navbar 
         setActiveSection={setActiveSection} 
         activeSection={activeSection}
       />
 
-      <main className="max-w-4xl mx-auto p-6 relative overflow-hidden">
+      {/* MAIN CONTENT */}
+      <main className="max-w-5xl mx-auto p-6 relative z-10">
 
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
           >
             {renderSection()}
