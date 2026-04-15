@@ -31,25 +31,25 @@ function App() {
   };
 
 
-const getPageClass = () => {
-  switch (activeSection) {
-    case "About":
-      return "page-greet";
-    case "Education":
-      return "page-education";
-    case "Experience":
-      return "page-experience";
-    case "Skills":
-      return "page-skills";
-    case "Contact":
-      return "page-contact";
-    default:
-      return "page-greet";
-  }
-};
+  const getPageClass = () => {
+    switch (activeSection) {
+      case "About":
+        return "page-greet";
+      case "Education":
+        return "page-education";
+      case "Experience":
+        return "page-experience";
+      case "Skills":
+        return "page-skills";
+      case "Contact":
+        return "page-contact";
+      default:
+        return "page-greet";
+    }
+  };
 
   return (
-    <div className={`${getPageClass()} min-h-screen text-amber-200 font-sans relative overflow-hidden`}>
+    <div className={`${getPageClass()} min-h-screen flex flex-col`}>
 
       {/* Glow overlay (Laravel-style ambiance) */}
       <div className="fixed inset-0 pointer-events-none
@@ -62,21 +62,21 @@ const getPageClass = () => {
         <h1 className="text-4xl font-extrabold tracking-widest
                        bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600
                        bg-clip-text text-transparent">
-          MY PORTFOLIO SYSTEM
+          WELCOME TO MY PORTFOLIO!
         </h1>
         <p className="text-amber-500 text-sm mt-2">
-          Developer Dashboard Active
+          By Charlie C. Lipago
         </p>
       </header>
 
       {/* NAV */}
-      <Navbar 
-        setActiveSection={setActiveSection} 
+      <Navbar
+        setActiveSection={setActiveSection}
         activeSection={activeSection}
       />
 
       {/* MAIN CONTENT */}
-      <main className="max-w-5xl mx-auto p-6 relative z-10">
+      <main className="flex-grow max-w-5xl mx-auto p-6 relative z-10">
 
         <AnimatePresence mode="wait">
           <motion.div
@@ -91,6 +91,12 @@ const getPageClass = () => {
         </AnimatePresence>
 
       </main>
+
+<footer className="text-center py-6 border-t border-amber-800 bg-black/40 backdrop-blur-sm">
+  <p className="text-amber-500 text-sm tracking-wide">
+    &copy; 2026 Charlie
+  </p>
+</footer>
 
     </div>
   );

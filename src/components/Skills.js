@@ -40,7 +40,7 @@ const Skills = () => {
         {/* Optional system tag */}
         <div className="mt-6 inline-block px-4 py-1 rounded-full border border-amber-700
                         bg-black/50 text-amber-400 text-xs tracking-widest">
-          SYSTEM STATUS: SKILL MODULE LOADED
+          SKILLS LOADED
         </div>
 
       </div>

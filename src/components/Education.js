@@ -18,12 +18,12 @@ const Education = () => {
         <ul className="space-y-3 text-amber-200">
           <li className="flex items-center gap-2">
             <span className="text-amber-500">▸</span>
-            Bachelor of Science in Information Technology
+            BS in Information Technology – University of the Cordilleras
           </li>
 
           <li className="flex items-center gap-2">
             <span className="text-amber-500">▸</span>
-            University in Baguio City
+            Pinsao National High School
           </li>
         </ul>
       </div>
