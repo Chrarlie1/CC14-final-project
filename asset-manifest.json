@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CC14-final-project/static/css/main.4055ba2f.css",
+    "main.js": "/CC14-final-project/static/js/main.703031ae.js",
+    "index.html": "/CC14-final-project/index.html",
+    "main.4055ba2f.css.map": "/CC14-final-project/static/css/main.4055ba2f.css.map",
+    "main.703031ae.js.map": "/CC14-final-project/static/js/main.703031ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4055ba2f.css",
+    "static/js/main.703031ae.js"
+  ]
+}
